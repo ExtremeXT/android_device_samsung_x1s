@@ -16,13 +16,15 @@ on property:hwservicemanager.ready=true && property:crypto.ready=1
     write /proc/iccc_ready 1
     start tzts_service
     wait_for_prop vendor.tzts_daemon Ready
-    start vendor.keymint-default
+    start vendor.keymaster-4-0
+    start vendor.keymaster-4-0_strongbox
     start vendor.gatekeeper-1-0
 
 on property:twrp.all.users.decrypted=true
     stop tz_service
     stop tzts_service
-    stop vendor.keymint-default
+    stop vendor.keymaster-4-0
+    stop vendor.keymaster-4-0_strongbox
     stop vendor.gatekeeper-1-0
     umount /mnt/vendor/efs
     umount /efs
@@ -41,7 +43,15 @@ service tzts_service /vendor/bin/tzts_daemon
     disabled
     seclabel u:r:recovery:s0
 
-service vendor.keymint-default /vendor/bin/hw/android.hardware.security.keymint-service
+service vendor.keymaster-4-0 /vendor/bin/hw/android.hardware.keymaster@4.0-service
+    interface android.hardware.keymaster@4.0::IKeymasterDevice default
+    user system
+    group system drmrpc
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
+
+service vendor.keymaster-4-0_strongbox /vendor/bin/hw/android.hardware.keymaster@4.0_strongbox-service
     user system
     group system drmrpc
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
