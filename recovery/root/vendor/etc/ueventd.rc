@@ -38,20 +38,6 @@
 /dev/v4l-subdev21         0660   system     graphics
 /dev/v4l-subdev32         0660   system     graphics
 
-# dma-heap
-/dev/dma_heap/crypto                0660   system     system
-/dev/dma_heap/crypto-uncached       0660   system     system
-/dev/dma_heap/camera                0660   system     camera
-/dev/dma_heap/camera-uncached       0660   system     camera
-
-/dev/dma_heap/vframe-secure         0660   system     drmrpc
-/dev/dma_heap/vscaler-secure        0660   system     system
-/dev/dma_heap/secure_camera-secure  0660   system     camera
-
-# dma-heap with prefix system-secure
-/dev/dma_heap/system-secure-gpu_buffer-secure     0444   system     system
-/dev/dma_heap/system-secure-vstream-secure        0444   system     drmrpc
-
 # gscalers
 /dev/video23              0660   media      graphics
 /dev/video26              0660   media      graphics
@@ -65,27 +51,27 @@
 # mscalers
 /dev/video50              0660   mediacodec      drmrpc
 /dev/m2m1shot_scaler0     0660   mediacodec      drmrpc
+/dev/scaler_ext           0660   cameraserver    vendor_mscl
 
 /dev/video55              0666   system     graphics
 /dev/g2d                  0660   system     graphics
 /dev/fimg2d               0666   system     graphics
-/dev/dri/card0            0666   system     graphics
-/dev/dri/card1            0666   system     graphics
 /dev/i2c-2                0660   system     system
 /dev/HPD                  0660   system     system
-
-# wfd
-/dev/tsmux                0660   media      graphics
-/dev/repeater             0660   media      graphics
 
 # mfc
 /dev/video6               0660   mediacodec mediadrm
 /dev/video7               0660   mediacodec mediadrm
 /dev/video8               0660   mediacodec mediadrm
 /dev/video9               0660   mediacodec mediadrm
+/dev/video10              0660   mediacodec mediadrm
+/dev/video11              0660   mediacodec mediadrm
+
+# wfd
+/dev/tsmux                0660   oem_5386      graphics
+/dev/repeater             0660   oem_5386      graphics
 
 # camera
-/dev/video100             0660   cameraserver   camera
 /dev/video101             0660   cameraserver   camera
 /dev/video102             0660   cameraserver   camera
 /dev/video103             0660   cameraserver   camera
@@ -94,46 +80,52 @@
 /dev/video106             0660   cameraserver   camera
 /dev/video107             0660   cameraserver   camera
 /dev/video108             0660   cameraserver   camera
-/dev/video109             0660   cameraserver   camera
 /dev/video110             0660   cameraserver   camera
 /dev/video111             0660   cameraserver   camera
 /dev/video112             0660   cameraserver   camera
 /dev/video113             0660   cameraserver   camera
+/dev/video114             0660   cameraserver   camera
 /dev/video120             0660   cameraserver   camera
 /dev/video121             0660   cameraserver   camera
 /dev/video122             0660   cameraserver   camera
 /dev/video123             0660   cameraserver   camera
+/dev/video124             0660   cameraserver   camera
 /dev/video130             0660   cameraserver   camera
 /dev/video131             0660   cameraserver   camera
 /dev/video132             0660   cameraserver   camera
 /dev/video133             0660   cameraserver   camera
 /dev/video134             0660   cameraserver   camera
+/dev/video135             0660   cameraserver   camera
+/dev/video136             0660   cameraserver   camera
 /dev/video140             0660   cameraserver   camera
 /dev/video141             0660   cameraserver   camera
 /dev/video142             0660   cameraserver   camera
-/dev/video143             0660   cameraserver   camera
-/dev/video144             0660   cameraserver   camera
 /dev/video145             0660   cameraserver   camera
+/dev/video146             0660   cameraserver   camera
+/dev/video147             0660   cameraserver   camera
+/dev/video148             0660   cameraserver   camera
+/dev/video149             0660   cameraserver   camera
 /dev/video150             0660   cameraserver   camera
 /dev/video151             0660   cameraserver   camera
 /dev/video152             0660   cameraserver   camera
 /dev/video153             0660   cameraserver   camera
 /dev/video154             0660   cameraserver   camera
-/dev/video155             0660   cameraserver   drmrpc
+/dev/video155             0660   cameraserver   camera
+/dev/video156             0660   cameraserver   camera
+/dev/video157             0660   cameraserver   camera
 /dev/video160             0660   cameraserver   camera
 /dev/video161             0660   cameraserver   camera
-/dev/video162             0660   cameraserver   camera
 /dev/video170             0660   cameraserver   camera
-/dev/video200             0660   cameraserver   camera
-/dev/video201             0660   cameraserver   camera
-/dev/video202             0660   cameraserver   camera
-/dev/video203             0660   cameraserver   camera
-/dev/video204             0660   cameraserver   camera
-/dev/video205             0660   cameraserver   camera
-/dev/video206             0660   cameraserver   camera
-/dev/video207             0660   cameraserver   camera
-/dev/video208             0660   cameraserver   camera
-/dev/video209             0660   cameraserver   camera
+/dev/video171             0660   cameraserver   camera
+/dev/video172             0660   cameraserver   camera
+/dev/video173             0660   cameraserver   camera
+/dev/video174             0660   cameraserver   camera
+/dev/video175             0660   cameraserver   camera
+/dev/video180             0660   cameraserver   camera
+/dev/video194             0660   cameraserver   camera
+/dev/video195             0660   cameraserver   camera
+/dev/video196             0660   cameraserver   camera
+/dev/video197             0660   cameraserver   camera
 /dev/video210             0660   cameraserver   camera
 /dev/video211             0660   cameraserver   camera
 /dev/video212             0660   cameraserver   camera
@@ -158,55 +150,50 @@
 /dev/video231             0660   cameraserver   camera
 /dev/video232             0660   cameraserver   camera
 /dev/video233             0660   cameraserver   camera
-/dev/video234             0660   cameraserver   camera
-/dev/video235             0660   cameraserver   camera
-/dev/video236             0660   cameraserver   camera
-/dev/video237             0660   cameraserver   camera
+
 /dev/video240             0660   cameraserver   camera
 /dev/video241             0660   cameraserver   camera
 /dev/video242             0660   cameraserver   camera
-/dev/video243             0660   cameraserver   camera
+/dev/video245             0660   cameraserver   camera
+/dev/video246             0660   cameraserver   camera
+/dev/video247             0660   cameraserver   camera
+
+/dev/video250             0660   cameraserver   camera
+/dev/video251             0660   cameraserver   camera
+/dev/video252             0660   cameraserver   camera
+/dev/video253             0660   cameraserver   camera
+/dev/video254             0660   cameraserver   camera
+
 /dev/media2               0660   media      media
 /dev/hdcp2                0660   media      media
-/dev/is_tuning_json       0660   cameraserver   camera
-/dev/is_tuning_socket     0660   cameraserver   camera
 
-# Google FRP solution
-/dev/block/by-name/persistent    0660    system    system
-
-# Reactivation lock
-/dev/block/by-name/steady    0660    system    system
-
-# dmabuf
-/dev/dmabuf_container     0660   cameraserver   camera
-/dev/dmabuf_trace         0660   system         system
+# For FRP
+/dev/block/by-name/persist	      0600   system          system
 
 # jpeg
 /dev/m2m1shot_jpeg	      0660   media          media
 /dev/video12              0660   cameraserver   media
-/dev/video13              0660   cameraserver   media
+/dev/jsqz                 0660   mediacodec     camera
 
 # audio
 /dev/seiren               0660   system     audio
 
-# TEEGRIS
-/dev/tzdev                0666   system     system
-/dev/tziwsock             0666   system     system
-/dev/tziwshmem            0660   system     system
-/dev/tzirs                0660   system     system
-/dev/tuihw                0660   system     system
+# Mobicore
+/dev/mobicore             0600   drmrpc     drmrpc
+/dev/mobicore-user        0666   drm        drmrpc
+
+# SSP
+/dev/ssp             	  0660   system     system
 
 # Secure MEM driver
 /dev/s5p-smem             0660   system     system
 
-# SSP
-/dev/ssp                  0660   system     system
-
 # cbd
-/dev/block/by-name/modem  0440   radio      radio
-/dev/block/by-name/modem_a  0440   radio      radio
-/dev/block/by-name/modem_b  0440   radio      radio
+/dev/block/by-name/modem  0400   radio      radio
 /dev/umts_ramdump0        0660   radio      radio
+
+# linkforward
+/dev/linkforward          0660   radio      radio
 
 # Diag and AT
 /dev/umts_dm0             0660   system     system
@@ -214,31 +201,28 @@
 /dev/ttyGS0               0660   system     system
 /dev/ttyGS1               0660   system     system
 /dev/ttyGS2               0660   system     system
-/dev/umts_atc0            0660   system     system
-/dev/ramdump_memshare     0660   system     system
-
-# TOE
-/dev/dit2                 0660   radio      radio
-
-# NPU
-/dev/vertex10             0644   system      system
-
-# DSP
-/dev/dsp                  0664   cameraserver  camera
 
 # Modem Interface
 /dev/block/by-name/radio    0660   system     radio
 /dev/block/by-name/cp_debug 0660   radio      system
+/sys/devices/platform/cpif	sim/ds_detect	0660	radio	system
 /dev/umts*                  0660   system     radio
+/dev/ipc*                   0660   system     radio
 /dev/umts_csd               0660   system     loop_radio
-/dev/smd4                   0660   system     system
+/dev/smd4                   0660   system     radio
 /dev/ramdump_memshare       0660   system     radio
-/dev/rmnet*                 0660   radio      inet
-/dev/usnet*                 0660   radio      inet
-/dev/umts_ciq*              0660   system     system_ext_bridge_rw
 
 # dev ril bridge
-/dev/drb	                0660   system     radio
+/dev/drb                0660   system     radio
+
+# Google FRP solution
+/dev/block/platform/13100000.ufs/by-name/persistent    0660    system    system
+
+# Reactivation lock
+/dev/block/platform/13100000.ufs/by-name/steady    0660    system    system
+
+# Reactivation lock
+/dev/block/platform/13100000.ufs/by-name/param    0660    root    system
 
 # interactive governor parameters
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_rate			0660	system	system
@@ -255,94 +239,62 @@
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/io_is_busy			0660	system	system
 
 # Vision (VPU, SCORE)
-/dev/vertex0             0660   media      media
+/dev/vertex0             0660   cameraserver   camera
 /dev/vertex1             0660   media      media
+/dev/dsp                 0660   cameraserver   camera
 
-# Voice Trigger Sound (VTS Misc)
-/dev/vts_fio_dev         0660   audioserver   system
+# NPU
+/dev/vertex10            0660   system      system
 
-# FRP
-/dev/block/by-name/frp          0660   root     system
-
-# Camellia
-/dev/camellia_iwc       0660   root     system
-
-# SCSC Bluetooth
+#SCSC Bluetooth
 /dev/scsc_h4_0           0660   bluetooth  bluetooth
 
 # SCSC WLAN
-/dev/mx_0_fxm_1_gdb       0660   wifi     wifi
-/dev/mx_0_fxm_2_gdb       0660   wifi     wifi
-/dev/mx_0_wlan_gdb        0660   wifi     wifi
-/dev/mx_0_wpan_gdb        0660   wifi     wifi
-/dev/mx_0_mmap            0660   wifi     wifi
-/dev/mx_client_test_0     0660   wifi     wifi
-/dev/mx_0_debug_sampler   0660   wifi     wifi
-/dev/mx140_usb_clk_test_0 0660   wifi     wifi
-/dev/scsc_log_collector_0 0660   wifi     wifi
-/dev/scsc_log_in_dram_0   0660   wifi     wifi
-/dev/scsc_wlan_mmap_0     0660   wifi     wifi
-/dev/slsi_wlan_dpd_mmap_0 0660   wifi     wifi
+/dev/mx_0_r4_gdb          0660   system     system
+/dev/mx_0_m4_gdb          0660   system     system
+/dev/mx_0_mmap            0660   system     system
+/dev/mx_client_test_0     0660   system     system
+/dev/mx_0_debug_sampler   0660   system     system
+/dev/mx140_usb_clk_test_0 0660   system     system
+/dev/scsc_log_collector_0 0660   system     system
 
-# Sensor Hub
-/dev/shub_sensorhub        0660   system     system
-/dev/shub_data_injection   0660   system     system
+#grip sensor
+/dev/input/event*				0660	system	input
+/sys/devices/virtual/input/input*   enable      0660	system	input
+
+# Sensor sysfs properties
+/sys/devices/virtual/input/input*    poll_delay    0660    system    radio
+/sys/devices/virtual/input/input*    enable        0660    system    radio
+/dev/input/event*	  0660   system		input
+/dev/ssp_data_injection   0660   system     	system
+
+# Sensorhub IIO
+/dev/ssp_sensorhub        0660   system		system
+/dev/batch_io		  0600   system         system
 /dev/iio:device*          0660   system		system
-/sys/devices/platform/shub/iio:device*    buffer/enable       0660    system    system
-/sys/devices/platform/shub/iio:device*    buffer/length       0660    system    system
+/sys/devices/platform/10650000.spi/spi_master/spi14/spi14.0/iio:device*    buffer/enable       0660    system    system
+/sys/devices/platform/10650000.spi/spi_master/spi14/spi14.0/iio:device*    buffer/length       0660    system    system
 /sys/bus/iio/devices/iio:device*    0664   system     radio
+/sys/bus/iio/devices/iio:device*	poll_delay	0660	system	system
 
-# grip sensor
-/dev/input/event*                               0660    system    input
-/sys/devices/virtual/input/input*   enable      0660    system    input
-/sys/devices/virtual/input/input*   poll_delay  0660    system    input
+# Broadcom Sensorhub Bridge Driver
+/dev/bbd_sensor           0660   system     system
+/dev/bbd_control          0660   system     system
+/dev/bbd_packet           0660   system     system
+/dev/bbd_reliable         0660   system     system
+/dev/bbd_sio              0660   system     system
+/dev/bbd_patch            0660   system     system
+/dev/bbd_urgent_patch     0660   system     system
+/dev/ttyBCM*              0660   system     system
 
-#
-# Permissions for Vibrator [
-#
+# TEEGRIS
+/dev/tzdev              0666   system     system
+/dev/tziwsock           0666   system     system
+/dev/tziwshmem          0660   system     system
+/dev/ionfd2phys         0660   system     system
+/dev/tuihw              0660   system     system
+/dev/tzirs              0660   system     system
+/dev/nwfsdev            0660   system     system
 
-# Vibrator nodes permission (timed_output)
-/sys/class/timed_output/vibrator    enable    			0664	system system
-/sys/class/timed_output/vibrator    motor_type    		0664	system system
-/sys/class/timed_output/vibrator    intensity  			0664	system system
-/sys/class/timed_output/vibrator    haptic_engine   	0664	system system
-/sys/class/timed_output/vibrator    multi_freq	    	0664	system system
-/sys/class/timed_output/vibrator    num_waves    		0664	system system
-/sys/class/timed_output/vibrator    cp_trigger_index    0664	system system
-/sys/class/timed_output/vibrator    cp_trigger_queue    0664	system system
-/sys/class/timed_output/vibrator    pwle			    0664	system system
-/sys/class/timed_output/vibrator    virtual_composite_indexes   0664	system system
-/sys/class/timed_output/vibrator    virtual_pwle_indexes    	0664	system system
-/sys/class/timed_output/vibrator    event_cmd    		0664	system system
-/sys/class/timed_output/vibrator    intensities    		0664	system system
-/sys/class/timed_output/vibrator    haptic_intensities  0664	system system
-/sys/class/timed_output/vibrator    haptic_durations    0664	system system
-/sys/class/timed_output/vibrator    use_sep_index	    0220	system system
-
-# Vibrator nodes permission - inputff
-/sys/class/sec_vib_inputff/control	i2s_test			0664	system system
-/sys/class/sec_vib_inputff/control	firmware_load		0664	system system
-/sys/class/sec_vib_inputff/control	current_temp		0664	system system
-/sys/class/sec_vib_inputff/control	ach_percent			0664	system system
-/sys/class/sec_vib_inputff/control	trigger_calibration	0664	system system
-/sys/class/sec_vib_inputff/control	f0_measured			0664	system system
-/sys/class/sec_vib_inputff/control	f0_offset			0664	system system
-/sys/class/sec_vib_inputff/control	f0_stored			0664	system system
-/sys/class/sec_vib_inputff/control	le_stored_param		0664	system system
-/sys/class/sec_vib_inputff/control	le_est				0444	system system
-/sys/class/sec_vib_inputff/control	use_sep_index		0220	system system
-/sys/class/sec_vib_inputff/control	event_cmd			0664	system system
-/sys/class/sec_vib_inputff/control	lra_resistance		0664	system system
-/sys/class/sec_vib_inputff/control  f0_cal_way		    0440	system system
-
-# Vibrator nodes permission (vib_info)
-/sys/class/vib_info_class/vib_support_info	intensities			0664	system system
-/sys/class/vib_info_class/vib_support_info	haptic_intensities	0664	system system
-/sys/class/vib_info_class/vib_support_info	functions			0664	system system
-
-#
-# ] Permissions for Vibrator
-#
-
-# PROCA dev config
-/dev/proca_config         0440   system     system
+# Voice Trigger Sound (VTS Misc)
+/dev/vts_fio_dev        0660   audioserver   system
