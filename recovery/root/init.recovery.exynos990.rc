@@ -4,6 +4,11 @@ on early-init
     mkdir /mnt/vendor/efs 0771 radio system
     start extract_ta
 
+on init
+    # Workaround crash, from stock recovery lol
+    write /proc/sys/kernel/hung_task_timeout_secs 0
+    setprop sys.usb.configfs 1
+
 on fs
     wait /dev/block/platform/${ro.boot.boot_devices}
     symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
