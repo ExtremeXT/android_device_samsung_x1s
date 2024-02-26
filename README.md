@@ -26,6 +26,18 @@ Available at [https://github.com/ExtremeXT/android_kernel_samsung_990/](https://
 - ADB when MTP is disabled
 - Data decryption in OneUI (works on AOSP)
 
+## FBE Decryption
+
+This is working only on AOSP ROMs, on OneUI it fails to decrypt /data because it uses a weaver synthetic password blob instead of a secdis one. For some reason TWRP can't decrypt weaver. If we get that working, decryption should work as it should.
+
+### Technical details
+
+FBEv1 decryption on Samsung devices requires the TEE and keymaster services to fully initialize, the TEE requires some specific Trusted Applications applets to initialize properly as well, they have been added into recovery/root/vendor/tee for the January version of the bootloader.
+
+Credits to @BlackMesa123 for the current progress and original device tree.
+
+Help for this issue is needed and would be greatly appreciated, it would help a lot of Samsung devices running OneUI.
+
 ## How to build
 
 This device tree was tested and is fully compatible with [minimal-manifest-twrp](https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp).
@@ -35,7 +47,7 @@ This device tree was tested and is fully compatible with [minimal-manifest-twrp]
 2. In the root folder of the fetched repo, clone the device tree:
 
 ```bash
-git clone https://github.com/ExtremeXT/android_device_samsung_x1s.git -b android-12.1 device/samsung/x1s
+git clone https://github.com/ExtremeXT/android_device_samsung_x1s.git -b decryption device/samsung/x1s
 ```
 
 3. To build:

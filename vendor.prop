@@ -1,5 +1,5 @@
 # TWRP
-ro.twrp.ext=true
+ro.twrp.ext=1
 
 # Crypto
 ro.security.keystore.keytype=sakv2,gak,sgak

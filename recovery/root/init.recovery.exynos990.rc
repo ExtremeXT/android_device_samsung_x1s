@@ -5,8 +5,6 @@ on early-init
     start extract_ta
 
 on init
-    # Workaround crash, from stock recovery lol
-    write /proc/sys/kernel/hung_task_timeout_secs 0
     setprop sys.usb.configfs 1
 
 on fs
