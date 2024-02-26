@@ -24,7 +24,10 @@ Available at [https://github.com/ExtremeXT/android_kernel_samsung_990/](https://
 ## Bugs
 
 - ADB when MTP is disabled
-- Data decryption in OneUI (works on AOSP)
+- /data decryption in OneUI (works on AOSP)
+
+## FBE Decryption
+The default branch has FBE disabled because it's only functional on AOSP, for that version, please visit [the decryption branch](https://github.com/ExtremeXT/android_device_samsung_x1s/tree/decryption).
 
 ## How to build
 
