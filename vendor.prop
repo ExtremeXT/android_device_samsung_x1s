@@ -1,3 +1,2 @@
 # TWRP
-ro.twrp.ext=true
-
+ro.twrp.ext=1
