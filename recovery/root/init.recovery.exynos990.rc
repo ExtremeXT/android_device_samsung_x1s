@@ -1,8 +1,5 @@
-import /init.recovery.teegris.rc
-
 on early-init
     mkdir /mnt/vendor/efs 0771 radio system
-    start extract_ta
 
 on init
     # Workaround crash, from stock recovery lol
@@ -15,10 +12,3 @@ on fs
 
 on boot
     start health-hal-2-1
-
-service extract_ta /vendor/bin/extract_ta.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0

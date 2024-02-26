@@ -88,16 +88,6 @@
         <name>netutils-wrapper</name>
         <version>1.0</version>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.frameworks.security.ucm.crypto</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehUcmKeystore</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehUcmKeystore/default</fqname>
-    </hal>
     <system-sdk>
         <version>28</version>
         <version>29</version>
