@@ -19,9 +19,9 @@ include device/samsung/universal9830-common/BoardConfigCommon.mk
 DEVICE_PATH := device/samsung/x1s
 
 # Audio
-BOARD_USE_BTA2DP_OFFLOAD := true
-BOARD_USE_QUAD_MIC := true
-BOARD_USE_CAMCORDER_QUAD_MIC := false
+$(call soong_config_set,universal9830AudioVars,use_bta2dp_offload,true)
+$(call soong_config_set,universal9830AudioVars,use_quad_mic,true)
+$(call soong_config_set,universal9830AudioVars,use_camcorder_quad_mic,false)
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
