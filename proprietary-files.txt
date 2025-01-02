@@ -33,6 +33,9 @@ vendor/firmware/bcmdhd_sta.bin_b1
 vendor/firmware/dual_cal_wide_swide.bin
 vendor/firmware/dual_cal_wide_tele.bin
 
+# Euicc - from raven-user 14 UP1A.231005.007
+-product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED|a1a8643d4c7905f8c69e4f9602813053628705bf
+
 # Hotword Enrollment
 -product/priv-app/HotwordEnrollmentOKGoogleEx3CORTEXM4/HotwordEnrollmentOKGoogleEx3CORTEXM4.apk
 -product/priv-app/HotwordEnrollmentXGoogleEx3CORTEXM4/HotwordEnrollmentXGoogleEx3CORTEXM4.apk
