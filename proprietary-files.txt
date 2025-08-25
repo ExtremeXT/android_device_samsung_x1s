@@ -62,6 +62,7 @@ vendor/firmware/setfile_3j1.bin
 vendor/firmware/setfile_gw2.bin
 
 # GPS/GNSS
+vendor/bin/hw/gpsd
 vendor/lib64/libwrappergps.so
 
 # NFC
