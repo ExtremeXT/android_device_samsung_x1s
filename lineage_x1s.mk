@@ -38,9 +38,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=x1sxxx \
     SystemName=x1sxxx \
-    BuildFingerprint=samsung/x1sxxx/x1s:11/RP1A.200720.012/G981BXXSADUH5:user/release-keys \
-    BuildDesc="x1sxxx-user 11 RP1A.200720.012 G981BXXSADUH5 release-keys"
+    BuildFingerprint=samsung/x1sxxx/x1s:11/RP1A.200720.012/G981BXXSNHYB1:user/release-keys \
+    BuildDesc="x1sxxx-user 11 RP1A.200720.012 G981BXXSNHYB1 release-keys"
 
 # Define PDA property for camera
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.build.PDA=G981BXXSADUH5
+    ro.build.PDA=G981BXXSNHYB1
