@@ -29,7 +29,7 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace('A8 FF FF 97 0A 00 00 14', '1F 20 03 D5 0A 00 00 14')
         .sig_replace('AB 02 20 36', '1F 20 03 D5'),
     'vendor/lib64/sensors.sensorhub.so': blob_fixup()
-        .replace_needed('libutils.so', 'libutils-v32.so')
+        .add_needed('libutils-v32.so')
         .remove_needed('libhidltransport.so')
         .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
 }  # fmt: skip
