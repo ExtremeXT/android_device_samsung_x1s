@@ -38,7 +38,7 @@ SOONG_CONFIG_samsungCameraVars_extra_ids := 52
 TARGET_SCREEN_DENSITY := 480
 
 # Kernel
-TARGET_KERNEL_CONFIG += x1sxxx.config
+TARGET_KERNEL_CONFIG += x1s.config
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := x1s
