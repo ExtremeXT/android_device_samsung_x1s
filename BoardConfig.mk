@@ -19,7 +19,7 @@ include device/samsung/universal9830-common/BoardConfigCommon.mk
 DEVICE_PATH := device/samsung/x1s
 
 # Audio
-$(call soong_config_set,universal9830AudioVars,use_bta2dp_offload,true)
+$(call soong_config_set,universal9830AudioVars,use_bta2dp_offload,false)
 $(call soong_config_set,universal9830AudioVars,use_quad_mic,true)
 $(call soong_config_set,universal9830AudioVars,use_camcorder_quad_mic,false)
 
