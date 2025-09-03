@@ -5,8 +5,5 @@ bluetooth.device.default_name=Galaxy S20
 ro.vendor.fingerprint.type=udfps
 ro.vendor.fingerprint.sensor_location=720|2500|150
 
-# RIL
-ro.vendor.radio.default_network=33,33
-
 # WiFi
 wifi.direct.interface=p2p-dev-wlan0
