@@ -1,0 +1,4 @@
+filegroup {
+    name: "vnd_exynos9830.txt",
+    srcs: ["libbt_vndcfg.txt"],
+}
