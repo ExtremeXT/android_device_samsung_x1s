@@ -35,7 +35,7 @@ SOONG_CONFIG_samsungCameraVars += extra_ids
 SOONG_CONFIG_samsungCameraVars_extra_ids := 52
 
 # Display
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 640
 
 # Kernel
 TARGET_KERNEL_CONFIG += x1sxxx.config
